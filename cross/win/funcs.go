@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	all "github.com/kercre123/WirePod/cross/all"
+	all "github.com/rugatling/WirePod/cross/all"
 )
 
 type Windows struct {

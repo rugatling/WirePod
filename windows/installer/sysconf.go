@@ -7,7 +7,7 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	cross_win "github.com/kercre123/WirePod/cross/win"
+	cross_win "github.com/rugatling/WirePod/cross/win"
 )
 
 var GitHubTag string

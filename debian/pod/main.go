@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/kercre123/wire-pod/chipper/pkg/vars"
-	stt "github.com/kercre123/wire-pod/chipper/pkg/wirepod/stt/vosk"
+	"github.com/rugatling/wire-pod/chipper/pkg/vars"
+	stt "github.com/rugatling/wire-pod/chipper/pkg/wirepod/stt/vosk"
 	"gopkg.in/ini.v1"
 )
 

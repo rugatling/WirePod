@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strconv"
 
-	cross_win "github.com/kercre123/WirePod/cross/win"
+	cross_win "github.com/rugatling/WirePod/cross/win"
 	"github.com/ncruces/zenity"
 )
 

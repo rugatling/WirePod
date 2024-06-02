@@ -1,15 +1,11 @@
 #!/bin/bash
 
 set -e
-
 if [[ ${GHACTIONS} == "" ]]; then
     export ANDROID_HOME=$HOME/Android/Sdk
     export TCHAIN=${ANDROID_HOME}/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin
-    export APKSIGNER=${ANDROID_HOME}/build-tools/34.0.0/apksigner
-elif [[ ${GHACTIONS} == "true" ]]; then
-    export ANDROID_HOME="$(pwd)/android-ndk"
-    export TCHAIN=${ANDROID_HOME}/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin
-    export APKSIGNER="$(pwd)/android-14/apksigner"
+    export APKSIGNER=${ANDROID_HOME}/android-14/apksigner
+
 fi
 
 if [[ ! $1 ]]; then

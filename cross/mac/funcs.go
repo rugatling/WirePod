@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	all "github.com/kercre123/WirePod/cross/all"
+	all "github.com/rugatling/WirePod/cross/all"
 	"github.com/ncruces/zenity"
 )
 

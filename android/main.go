@@ -11,18 +11,18 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-
+	"time"
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
-	"fyne.io/fyne/v2/dialog"
+	
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
-	"github.com/kercre123/wire-pod/chipper/pkg/initwirepod"
-	"github.com/kercre123/wire-pod/chipper/pkg/logger"
-	"github.com/kercre123/wire-pod/chipper/pkg/mdnshandler"
-	"github.com/kercre123/wire-pod/chipper/pkg/vars"
-	wirepod_vosk "github.com/kercre123/wire-pod/chipper/pkg/wirepod/stt/vosk"
+	"github.com/rugatling/wire-pod/chipper/pkg/initwirepod"
+	"github.com/rugatling/wire-pod/chipper/pkg/logger"
+	"github.com/rugatling/wire-pod/chipper/pkg/mdnshandler"
+	"github.com/rugatling/wire-pod/chipper/pkg/vars"
+	wirepod_vosk "github.com/rugatling/wire-pod/chipper/pkg/wirepod/stt/vosk"
 	"github.com/wlynxg/anet"
 )
 
@@ -49,6 +49,7 @@ func main() {
 		DeleteStaticContent()
 		DoUnzip()
 	}
+	
 	vars.AndroidPath = DataPath
 	vars.Packaged = true
 	PodWindow(myApp)
@@ -87,38 +88,49 @@ func PodWindow(myApp fyne.App) {
 	})
 	hyprLink.Hide()
 
+
 	secondCard := widget.NewCard("WirePod Control", "", container.NewWithoutLayout())
-	var startButton *widget.Button
-	startButton = widget.NewButton("Start", func() {
-		if !IsConnedToWifi() {
-			dialog.ShowCustom("This device must be connected to Wi-Fi first", "OK", container.NewWithoutLayout(), window)
-			return
-		}
-		secondCard.SetSubTitle("Running!")
-		go func() {
-			http.DefaultTransport.(*http.Transport).TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
-			go mdnshandler.PostmDNS()
-			go func() {
-				PingJdocsInit()
-				PingJdocsStart()
-			}()
-			hyprLink.SetText("http://" + vars.GetOutboundIP().String() + ":8080")
-			hyprLink.SetURL(&url.URL{
-				Scheme: "http",
-				Host:   vars.GetOutboundIP().String() + ":8080",
-			})
-			hyprLink.Show()
-			linkLabel.Show()
-			startButton.Disable()
-			contextCheck.Disable()
-			initwirepod.StartFromProgramInit(wirepod_vosk.Init, wirepod_vosk.STT, wirepod_vosk.Name)
-			startButton.Enable()
-			contextCheck.Enable()
-			hyprLink.Hide()
-			linkLabel.Hide()
-			secondCard.SetSubTitle("wirepod failed :(")
-		}()
-	})
+
+	
+		
+		  {   
+				for !IsConnedToWifi() {
+				<-time.After(3 * time.Second)
+				}  
+
+				secondCard.SetSubTitle("Running!")
+				go func() {
+					http.DefaultTransport.(*http.Transport).TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
+					go mdnshandler.PostmDNS()
+					go func() {
+						PingJdocsInit()
+						PingJdocsStart()
+					}()
+					hyprLink.SetText("http://" + vars.GetOutboundIP().String() + ":8080")
+					hyprLink.SetURL(&url.URL{
+						Scheme: "http",
+						Host:   vars.GetOutboundIP().String() + ":8080",
+					})
+					hyprLink.Show()
+					linkLabel.Show()
+					
+					contextCheck.Disable()
+					
+					initwirepod.StartFromProgramInit(wirepod_vosk.Init, wirepod_vosk.STT, wirepod_vosk.Name)
+					
+					contextCheck.Enable()
+					
+					hyprLink.Hide()
+					linkLabel.Hide()
+					secondCard.SetSubTitle("wirepod failed :(")
+				}()
+			}
+			
+		
+	
+
+
+
 
 	stuffContainer = container.NewVScroll(container.NewVBox(
 		firstCard,
@@ -128,7 +140,9 @@ func PodWindow(myApp fyne.App) {
 		linkLabel,
 		hyprLink,
 		contextCheck,
-		startButton,
+		
+		
+		
 	))
 
 	window.SetContent(stuffContainer)

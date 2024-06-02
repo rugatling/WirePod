@@ -18,14 +18,14 @@ import (
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/dialog"
 	"fyne.io/fyne/v2/widget"
-	cross_win "github.com/kercre123/WirePod/cross/win"
+	cross_win "github.com/rugatling/WirePod/cross/win"
 	"github.com/ncruces/zenity"
 )
 
 //go:embed ico
 var iconData embed.FS
 
-var amd64podURL string = "https://github.com/kercre123/WirePod/releases/latest/download/wire-pod-win-amd64.zip"
+var amd64podURL string = "https://github.com/rugatling/WirePod/releases/latest/download/wire-pod-win-amd64.zip"
 
 //var amd64podURL string = "http://192.168.1.2:82/wire-pod-win-amd64.zip"
 

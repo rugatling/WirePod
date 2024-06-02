@@ -34,7 +34,7 @@ fi
 
 # gather compilers
 if [[ ! -d wire-pod-toolchain ]]; then
-    git clone https://github.com/kercre123/wire-pod-toolchain --depth=1
+    git clone https://github.com/rugatling/wire-pod-toolchain --depth=1
 fi
 
 # compile vosk...
@@ -52,7 +52,7 @@ function createDEBIAN() {
     echo "Version: ${PODVERSION#v}" >> control
     echo "Maintainer: Kerigan Creighton <kerigancreighton@gmail.com>" >> control
     echo "Description: A replacement voice server for the Anki Vector robot." >> control
-    echo "Homepage: https://github.com/kercre123/wire-pod" >> control
+    echo "Homepage: https://github.com/rugatling/wire-pod" >> control
     echo "Architecture: $ARCH" >> control
     echo "Depends: libopus0, libogg0, avahi-daemon, libatomic1, libsodium23" >> control
     cd $ORIGPATH
@@ -293,7 +293,7 @@ function buildWirePod() {
     
     # get the webroot, intent data, certs
     if [[ ! -d wire-pod ]]; then
-        git clone https://github.com/kercre123/wire-pod --depth=1
+        git clone https://github.com/rugatling/wire-pod --depth=1
     fi
     DC=debcreate/${ARCH}
     WPC=wire-pod/chipper
