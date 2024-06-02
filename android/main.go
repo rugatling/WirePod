@@ -95,7 +95,7 @@ func PodWindow(myApp fyne.App) {
 		
 		  {   
 				for !IsConnedToWifi() {
-				<-time.After(3 * time.Second)
+				<-time.After(10 * time.Second)
 				}  
 
 				secondCard.SetSubTitle("Running!")
