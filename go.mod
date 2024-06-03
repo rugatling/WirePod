@@ -10,13 +10,12 @@ require (
 	github.com/getlantern/systray v1.2.2
 	github.com/go-ole/go-ole v1.3.0
 	github.com/ncruces/zenity v0.10.10
+	github.com/rugatling/wire-pod/chipper v0.0.0-20240603102323-d7bd1e15e261
 	github.com/soheilhy/cmux v0.1.5
 	github.com/wlynxg/anet v0.0.1
 	golang.org/x/sys v0.15.0
 	gopkg.in/ini.v1 v1.67.0
 )
-
-
 
 require (
 	fyne.io/systray v1.10.1-0.20231115130155-104f5ef7839e // indirect
@@ -73,6 +72,7 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/randall77/makefat v0.0.0-20210315173500-7ddd0e42c844 // indirect
+	github.com/rugatling/go-openai v0.0.0-20240602200622-19edf07d0a97 // indirect
 	github.com/sagikazarmark/locafero v0.4.0 // indirect
 	github.com/sagikazarmark/slog-shim v0.1.0 // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect
