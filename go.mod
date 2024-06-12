@@ -10,12 +10,12 @@ require (
 	github.com/getlantern/systray v1.2.2
 	github.com/go-ole/go-ole v1.3.0
 	github.com/ncruces/zenity v0.10.10
+	github.com/rugatling/wire-pod/chipper v0.0.0-20240612153934-9debe57bb679
 	github.com/soheilhy/cmux v0.1.5
 	github.com/wlynxg/anet v0.0.1
 	golang.org/x/sys v0.15.0
 	gopkg.in/ini.v1 v1.67.0
 )
-
 
 require (
 	fyne.io/systray v1.10.1-0.20231115130155-104f5ef7839e // indirect
