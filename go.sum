@@ -500,8 +500,8 @@ github.com/rogpeppe/go-internal v1.3.0/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFR
 github.com/rogpeppe/go-internal v1.9.0 h1:73kH8U+JUqXU8lRuOHeVHaa/SZPifC7BkcraZVejAe8=
 github.com/rugatling/go-openai v0.0.0-20240602200622-19edf07d0a97 h1:uZgYgoIP234Q1yPHV5uQPM0ZkhjKinT8VQafdDarvqU=
 github.com/rugatling/go-openai v0.0.0-20240602200622-19edf07d0a97/go.mod h1:D2GUNPklB0S39CynQAH+f09YMMvhGhi/pqc58PXnPPU=
-github.com/rugatling/wire-pod/chipper v0.0.0-20240612162439-53279b6e1945 h1:eTOPOzAdWuDWq8dgU1RuGly2WiLIQcQJhr8F7vUAXDA=
-github.com/rugatling/wire-pod/chipper v0.0.0-20240612162439-53279b6e1945/go.mod h1:+DwiUCGdlRxjKtfDFF/gJyPcnh4VbgC4wgSPxeQewPg=
+github.com/rugatling/wire-pod/chipper v0.0.0-20240612164406-6072a605acf7 h1:4ajx1cNvT+emDsDF8o2pZ89MDxiVoy+MUBWKD+kNAxc=
+github.com/rugatling/wire-pod/chipper v0.0.0-20240612164406-6072a605acf7/go.mod h1:+DwiUCGdlRxjKtfDFF/gJyPcnh4VbgC4wgSPxeQewPg=
 github.com/russross/blackfriday/v2 v2.0.1/go.mod h1:+Rmxgy9KzJVeS9/2gXHxylqXiyQDYRxCVz55jmeOWTM=
 github.com/ryanuber/columnize v0.0.0-20160712163229-9b3edd62028f/go.mod h1:sm1tb6uqfes/u+d4ooFouqFdy9/2g9QGwK3SQygK0Ts=
 github.com/sagikazarmark/locafero v0.4.0 h1:HApY1R9zGo4DBgr7dqsTH/JJxLTTsOt7u6keLGt6kNQ=
