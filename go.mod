@@ -8,7 +8,6 @@ require (
 	github.com/digital-dream-labs/hugh v0.0.0-20210210154335-f4159b9fcd5f
 	github.com/fforchino/vector-go-sdk v0.0.0-20231108155304-62168f3595d6
 	github.com/getlantern/systray v1.2.2
-
 	github.com/go-ole/go-ole v1.3.0
 	github.com/ncruces/zenity v0.10.10
 	github.com/soheilhy/cmux v0.1.5
@@ -17,6 +16,7 @@ require (
 	gopkg.in/ini.v1 v1.67.0
 )
 
+require github.com/rugatling/wire-pod/chipper v0.0.0-20240612162105-872c0edb5580
 
 require (
 	fyne.io/systray v1.10.1-0.20231115130155-104f5ef7839e // indirect
