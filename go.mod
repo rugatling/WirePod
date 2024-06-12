@@ -10,7 +10,7 @@ require (
 	github.com/getlantern/systray v1.2.2
 	github.com/go-ole/go-ole v1.3.0
 	github.com/ncruces/zenity v0.10.10
-	github.com/rugatling/wire-pod/chipper v0.0.0-20240612162439-53279b6e1945
+	
 	github.com/soheilhy/cmux v0.1.5
 	github.com/wlynxg/anet v0.0.1
 	golang.org/x/sys v0.15.0
