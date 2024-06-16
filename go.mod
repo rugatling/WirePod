@@ -16,7 +16,6 @@ require (
 	gopkg.in/ini.v1 v1.67.0
 )
 
-require github.com/rugatling/wire-pod/chipper v0.0.0-20240613231745-ffd1176e0bf7
 
 require (
 	fyne.io/systray v1.10.1-0.20231115130155-104f5ef7839e // indirect
